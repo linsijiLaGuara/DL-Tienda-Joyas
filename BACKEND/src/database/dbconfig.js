@@ -1,5 +1,4 @@
 const { Pool } = require("pg");
-const format = require("pg-format");
 
 const pool = new Pool({
   user: "lin",
