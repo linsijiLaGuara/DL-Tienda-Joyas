@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "ea64b0ee-b5ab-4ab9-90be-3cc301199200",
+		"name": "Joyas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5507815"
+	},
+	"item": [
+		{
+			"name": "consulta",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/joyas/joyas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"joyas",
+						"joyas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtener",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/joyas/obtener?limits=4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"joyas",
+						"obtener"
+					],
+					"query": [
+						{
+							"key": "limits",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "orden",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/joyas/orden?limit=3&order_by=stock_DESC",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"joyas",
+						"orden"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "3"
+						},
+						{
+							"key": "order_by",
+							"value": "stock_DESC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta de joyas con cláusulas en estructura de datos HATEOAS:",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/joyas/paginacion?limit=2&page=2&order_by=stock_ASC",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"joyas",
+						"paginacion"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "2"
+						},
+						{
+							"key": "page",
+							"value": "2"
+						},
+						{
+							"key": "order_by",
+							"value": "stock_ASC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filtrando las joyas por precio máximo, mínimo, categoría y metal",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/joyas/filtros?precio_min=25000&precio_max=30000&categoria=aros&metal=oro",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"joyas",
+						"filtros"
+					],
+					"query": [
+						{
+							"key": "precio_min",
+							"value": "25000"
+						},
+						{
+							"key": "precio_max",
+							"value": "30000"
+						},
+						{
+							"key": "categoria",
+							"value": "aros"
+						},
+						{
+							"key": "metal",
+							"value": "oro"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
